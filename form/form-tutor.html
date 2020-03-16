@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Data Tables</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../style/style.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <!-- mini logo for sidebar mini 50x50 pixels -->
+        <span class="logo-mini"><b>Ga</b>ma</span>
+        <!-- logo for regular state and mobile devices -->
+        <span class="logo-lg"><b>Gama</b>UI</span>
+      </a>
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+  
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                <span class="hidden-xs">Admin</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="user-footer">
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+
+  <aside class="main-sidebar">
+    <section class="sidebar">
+      
+      <ul class="sidebar-menu" data-widget="tree">
+        <li>
+          <a href="../index.html">
+            <i class="fa fa-th"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="../data_registration.html">
+            <i class="fa fa-th"></i> <span>Registrasi</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i> <span>Siswa</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../data_siswa.html"><i class="fa fa-circle-o"></i> Reguler</a></li>
+            <li><a href="../data_siswa_private.html"><i class="fa fa-circle-o"></i> Private</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="../data_pengajar.html">
+            <i class="fa fa-th"></i> <span>Pengajar</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-th"></i> <span>Absensi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../absensi-siswa.html"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li><a href="../absensi-pengajar.html"><i class="fa fa-circle-o"></i> Pengajar</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Nilai</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../nilai-siswa.html"><i class="fa fa-circle-o"></i> Siswa</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>
+        Edit Tutor
+      </h1>
+    </section>
+
+    <section class="content">
+       
+      <div class="box box-info">
+          <form class="form-horizontal">
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nama Lengkap</label>
+                    <div class="col-sm-10">
+                      <input type="nama" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
+    
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="Tempat Lahir">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">No Telp</label>
+    
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="inputPassword3" placeholder="No Telp">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Pendidikan Terakhir</label>
+    
+                    <div class="col-sm-10">
+                      <select class="form-control">
+                        <option>Mahasiswa</option>
+                        <option>S1 Pend Bahasa Indonesia</option>
+                        <option>S1 Matematika</option>
+                        <option>S1 Pend Bahasa Inggris</option>
+                        <option>S1 Sosiologi</option>
+                        <option>S2 Manajemen Pendidikan</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-6">
+                  
+                  <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">Mata Pelajaran</label>
+    
+                    <div class="col-sm-10">
+                      <div class="col-sm-12">
+                        <label> <input type="checkbox"> Bahasa Indonesia SD</label>
+                        <label class="ml-3"> <input type="checkbox"> Matematika SD</label>
+                        <label class="ml-3"> <input type="checkbox"> IPA SD</label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label> <input type="checkbox"> Bahasa Indonesia SMP</label>
+                        <label class="ml-3"> <input type="checkbox"> Matematika SMP</label>
+                        <label class="ml-3"> <input type="checkbox"> IPA SMP</label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label> <input type="checkbox"> Bahasa Indonesia SMA</label>
+                        <label class="ml-3"> <input type="checkbox"> Matematika SMA</label>
+                        <label class="ml-3"> <input type="checkbox"> Fisika SMA</label>
+                      </div>
+                      <div class="col-sm-12">
+                        <label> <input type="checkbox"> Biologi</label>
+                        <label class="ml-3"> <input type="checkbox"> Sosiologi</label>
+                        <label class="ml-3"> <input type="checkbox"> Geografi</label>
+                        <label class="ml-3"> <input type="checkbox"> Sejarah</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">SK</label>
+      
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputPassword3" placeholder="SK">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputPassword3" class="col-sm-2 control-label">Status</label>
+      
+                      <div class="col-sm-10">
+                        <select class="form-control">
+                          <option>Frelance</option>
+                          <option>Tetap</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  
+                  
+                </div>
+              </div>
+              
+
+            </div>
+
+            <div class="box-footer">
+              <button type="submit" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-info pull-right">Simpan</button>
+            </div>
+
+          </form>
+        </div>
+
+    </section>
+  </div>
+  
+  <div class="control-sidebar-bg"></div>
+
+</div>
+
+<!-- jQuery 3 -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<script src="../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+
+<script>
+  $(function() {
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
+  })
+</script>
+<!-- page script -->
+</body>
+</html>
